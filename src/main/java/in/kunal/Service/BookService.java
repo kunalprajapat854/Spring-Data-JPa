@@ -119,16 +119,9 @@ public class BookService {
 	
 	public void delete (Integer id) {
 		bookrepo.deleteid(id);
-	}
-	
+	}	
 
-   public void updatebook(Integer id){
-	Optional<Book> findid  = bookrepo.findbyid(id);
-	      if(book.isPresent){
-			Book book = findid.get();
-			bookrepo.save(book);
-		  }
-   }
+   
 	
 	
 	
