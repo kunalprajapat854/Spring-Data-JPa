@@ -121,11 +121,23 @@ public class BookService {
 		bookrepo.deleteid(id);
 	}	
 
+
    public List<Book> getallbooks(){
 	   List<Book> list =  Arrays.asList(1.3.5);
 	   Iterable<Book> itr = bookrepo.findAllById(list);
 	   itr.forEach(System.out::println);
    }
+
+	public void updatebook (Integer id){
+		Optional<Book> book = bookrepo.findbyid(id);
+		if(book.isPresent()){
+			Book book = book.get();
+			bookrepo.save(book);
+		}
+	}
+
+   
+
 	
 	
 	
