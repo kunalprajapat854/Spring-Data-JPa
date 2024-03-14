@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: 001-Spring-DataJpa
+  datasource:
+    url:    jdbc:mysql://localhost:3306/datajpa
+    password: Kunal@123
+    username: root
+  jpa:
+    show-sql: true
+    
+    hibernate:
+      ddl-auto: update
