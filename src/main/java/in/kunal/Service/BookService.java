@@ -121,6 +121,14 @@ public class BookService {
 		bookrepo.deleteid(id);
 	}	
 
+	public void updatebook (Integer id){
+		Optional<Book> book = bookrepo.findbyid(id);
+		if(book.isPresent()){
+			Book book = book.get();
+			bookrepo.save(book);
+		}
+	}
+
    
 	
 	
