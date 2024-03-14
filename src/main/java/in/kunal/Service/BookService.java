@@ -121,7 +121,11 @@ public class BookService {
 		bookrepo.deleteid(id);
 	}	
 
-   
+   public List<Book> getallbooks(){
+	   List<Book> list =  Arrays.asList(1.3.5);
+	   Iterable<Book> itr = bookrepo.findAllById(list);
+	   itr.forEach(System.out::println);
+   }
 	
 	
 	
